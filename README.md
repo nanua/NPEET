@@ -1,7 +1,12 @@
-NPEET
+NPEET-Numpy
 =====
 
-Non-parametric Entropy Estimation Toolbox
+This package is a numpy extension of the Non-parametric Entropy Estimation Toolbox *NPEET*. Several entropy estimation functions equipped with numpy interfaces are implemented in `npeet/entropy_estimator_numpy.py`. 
+
+
+
+NPEET
+=====
 
 This package contains Python code implementing several entropy estimation functions for both discrete and continuous variables. Information theory provides a model-free way find structure in complex systems, but difficulties in estimating these quantities has traditionally made these techniques infeasible. This package attempts to allay these difficulties by making modern state-of-the-art entropy estimation methods accessible in a single easy-to-use python library. 
 
@@ -38,19 +43,19 @@ print ee.shuffle_test(ee.cmi, x, y, z, ci=0.95, ns=1000)
 ```
 This prints the mutual information between column 5 and 9, conditioned on columns 15 and 17. You can also use the function shuffle_test to return confidence intervals for any estimator. Shuffle_test returns the mean CMI under the null hypothesis (CMI=0), and 95% confidence intervals, estimated using 1000 random permutations of the data.
 *Note that we converted the numpy arrays to lists! The current version really works only on python lists (lists of lists actually, as in the first example.*
-		
+​		
 See documentation for references on all implemented estimators.
 
 				A Kraskov, H Stögbauer, P Grassberger. 
 				http://pre.aps.org/abstract/PRE/v69/i6/e066138
 				Estimating Mutual Information
 				PRE 2004.
-
+	
 				Greg Ver Steeg and Aram Galstyan 
 				http://lanl.arxiv.org/abs/1208.4475
 				Information-Theoretic Measures of Influence Based on Content Dynamics
 				WSDM, 2013.
-
+	
 				Greg Ver Steeg and Aram Galstyan 
 				http://arxiv.org/abs/1110.2724 
 				Information Transfer in Social Media

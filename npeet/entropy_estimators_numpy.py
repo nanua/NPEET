@@ -87,6 +87,6 @@ def avg_digamma(x, knn_distance, eps=1e-15):
 
 
 if __name__ == "__main__":
-    arr_1 = np.random.normal(0, 1, (10000, 1))
-    arr_2 = np.random.normal(0, 10, (10000, 1))
-    print(kl_divergence(arr_2, arr_1))
+    arr_1 = np.ones((100000, 1))
+    arr_2 = np.random.normal(0, 1, (10000, 1))
+    print(entropy(arr_2))
